@@ -1,0 +1,49 @@
+<?php
+// A função optional_param obtém o valor do parâmetro 'autosave' passado via POST ou GET. Caso não exista, retorna o valor 'false'.
+$autosave = optional_param('autosave', false, PARAM_BOOL);
+
+// Verifica se o parâmetro 'autosave' foi passado e se seu valor é verdadeiro
+if ($autosave) {
+    // Se for um salvamento automático, o código processa a tentativa do usuário com a função 'process_attempt'.
+    // A função recebe o timestamp atual (time()), e os valores false para os parâmetros seguintes, além de uma variável $page.
+    $status = $attemptobj->process_attempt(time(), false, false, $page);
+    
+    // Após processar, envia uma resposta JSON confirmando o status de salvamento.
+    echo json_encode(['status' => 'saved']);
+    
+    // Encerra a execução do script PHP após o salvamento.
+    exit;
+}
+?>
+<!-- Script JavaScript que gerencia o salvamento automático no lado do cliente -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // A função autoSave é chamada periodicamente para realizar o salvamento automático.
+    function autoSave() {
+        // Cria um objeto FormData que contém os dados do formulário da página.
+        let formData = new FormData(document.querySelector("form"));
+        
+        // Adiciona o parâmetro 'autosave' com valor '1' ao FormData, indicando que é um salvamento automático.
+        formData.append("autosave", "1");
+
+        // Envia os dados via requisição POST para o mesmo endereço da página, sem recarregar a página.
+        fetch(window.location.href, {
+            method: "POST",
+            body: formData,
+            headers: {
+                "X-Requested-With": "XMLHttpRequest" // Header que indica que a requisição é assíncrona (AJAX)
+            }
+        })
+        .then(response => response.json()) // Processa a resposta JSON recebida do servidor.
+        .then(data => {
+            // Exibe no console o status do salvamento automático.
+            console.log("Resposta salva automaticamente:", data);
+        })
+        .catch(error => console.error("Erro no salvamento automático:", error)); // Exibe erros no console, caso ocorram.
+    }
+
+    // Define o intervalo para chamar a função autoSave a cada 60.000 milissegundos (1 minuto).
+    setInterval(autoSave, 60000);
+});
+</script>
+
