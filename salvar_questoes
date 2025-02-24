@@ -2,8 +2,6 @@
 // A função optional_param obtém o valor do parâmetro 'autosave' passado via POST ou GET. Caso não exista, retorna o valor 'false'.
 $autosave = optional_param('autosave', false, PARAM_BOOL);
 
-
-
 // Verifica se o parâmetro 'autosave' foi passado e se seu valor é verdadeiro
 if ($autosave) {
     // Se for um salvamento automático, o código processa a tentativa do usuário com a função 'process_attempt'.
