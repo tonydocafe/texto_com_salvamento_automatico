@@ -31,51 +31,25 @@ Esse sistema de salvamento automático é útil em aplicações que exigem que o
 
 
 
-Salvar Texto Automaticamente com XAMPP
-Este projeto permite salvar automaticamente o conteúdo digitado em um campo de texto para um banco de dados MySQL a cada 2 segundos após a digitação. O sistema utiliza XAMPP para configurar o ambiente local com Apache, PHP e MySQL.
+# 📝 Salvar Texto Automaticamente com XAMPP  
 
-📌 Requisitos
-XAMPP instalado e em execução
-Banco de dados MySQL configurado
-Navegador compatível com JavaScript
-🛠️ Configuração
-1️⃣ Iniciar o XAMPP
-Abra o XAMPP Control Panel e inicie os serviços:
-Apache (para executar o PHP)
-MySQL (para armazenar os dados)
-2️⃣ Criar o Banco de Dados
-Acesse o phpMyAdmin (http://localhost/phpmyadmin/) e execute:
+Este projeto permite salvar automaticamente um texto digitado em um campo de entrada para um banco de dados **MySQL** usando **PHP** e **JavaScript**. O salvamento ocorre a cada **2 segundos após a última digitação**.  
 
-sql
-Copiar
-Editar
-CREATE DATABASE texto;
-USE texto;
+O sistema utiliza **XAMPP** para fornecer um ambiente local com **Apache, PHP e MySQL**.  
 
-CREATE TABLE mensagens (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    texto TEXT NOT NULL,
-    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-3️⃣ Configurar os Arquivos
-Coloque os seguintes arquivos dentro da pasta do seu servidor local (htdocs no XAMPP):
+## 📌 Requisitos  
 
-index.html → Interface do usuário
-script.js → Lógica para salvar automaticamente
-salvar.php → Script PHP para salvar os dados no banco
-⚠ Certifique-se de que o XAMPP está rodando e que os arquivos estão acessíveis via http://localhost/seu-projeto/
+- **XAMPP** instalado  
+- **Apache e MySQL ativados no XAMPP**  
+- **Banco de dados MySQL configurado**  
 
-🚀 Como Funciona
-O usuário digita no campo de texto
-O script salva automaticamente a cada 2 segundos após a digitação
-O PHP verifica se a mensagem já foi salva para evitar duplicação
-O status do salvamento é exibido na tela
-🔧 Solução de Problemas
-Erro de conexão: Verifique se o MySQL está rodando no XAMPP
-Banco de dados não encontrado: Certifique-se de criar o banco conforme as instruções
-PHP não está rodando: Acesse http://localhost/seu-projeto/salvar.php e veja se há erros
-📌 Tecnologias Usadas
-XAMPP (Apache, MySQL, PHP)
-HTML, CSS, JavaScript
-Fetch API para requisições assíncronas
+## 🛠️ Configuração  
+
+### 1️⃣ Iniciar o XAMPP  
+1. Abra o **XAMPP Control Panel**  
+2. Inicie o **Apache e o MySQL**  
+
+### 2️⃣ Criar o Banco de Dados  
+1. Acesse **phpMyAdmin** em:  
+http://localhost/phpmyadmin/
 
