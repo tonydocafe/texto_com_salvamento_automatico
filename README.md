@@ -60,3 +60,6 @@ PHP
 ----------------------------------------------------------------------------
 O script PHP recebe uma requisição do tipo POST, verifica se há um campo chamado texto na requisição e tenta armazenar esse conteúdo em um banco de dados MySQL, garantindo que não haja duplicatas.
 
+.JS
+------------------------------------------------------------------------------
+JavaScript implementa um sistema de salvamento automático e manual de um texto digitado pelo usuário, enviando-o para um servidor via fetch(). Ele evita envios repetidos e fornece feedback visual ao usuário.
