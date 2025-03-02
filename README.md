@@ -27,3 +27,55 @@ A página deve conter um formulário válido.
 O código PHP deve ser executado em um ambiente que suporte a função optional_param(), como o Moodle, já que a função é específica desse sistema.
 #### Considerações Finais
 Esse sistema de salvamento automático é útil em aplicações que exigem que o usuário não perca seu progresso em formulários longos, como em testes ou submissões de conteúdo.
+
+
+
+
+Salvar Texto Automaticamente com XAMPP
+Este projeto permite salvar automaticamente o conteúdo digitado em um campo de texto para um banco de dados MySQL a cada 2 segundos após a digitação. O sistema utiliza XAMPP para configurar o ambiente local com Apache, PHP e MySQL.
+
+📌 Requisitos
+XAMPP instalado e em execução
+Banco de dados MySQL configurado
+Navegador compatível com JavaScript
+🛠️ Configuração
+1️⃣ Iniciar o XAMPP
+Abra o XAMPP Control Panel e inicie os serviços:
+Apache (para executar o PHP)
+MySQL (para armazenar os dados)
+2️⃣ Criar o Banco de Dados
+Acesse o phpMyAdmin (http://localhost/phpmyadmin/) e execute:
+
+sql
+Copiar
+Editar
+CREATE DATABASE texto;
+USE texto;
+
+CREATE TABLE mensagens (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    texto TEXT NOT NULL,
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+3️⃣ Configurar os Arquivos
+Coloque os seguintes arquivos dentro da pasta do seu servidor local (htdocs no XAMPP):
+
+index.html → Interface do usuário
+script.js → Lógica para salvar automaticamente
+salvar.php → Script PHP para salvar os dados no banco
+⚠ Certifique-se de que o XAMPP está rodando e que os arquivos estão acessíveis via http://localhost/seu-projeto/
+
+🚀 Como Funciona
+O usuário digita no campo de texto
+O script salva automaticamente a cada 2 segundos após a digitação
+O PHP verifica se a mensagem já foi salva para evitar duplicação
+O status do salvamento é exibido na tela
+🔧 Solução de Problemas
+Erro de conexão: Verifique se o MySQL está rodando no XAMPP
+Banco de dados não encontrado: Certifique-se de criar o banco conforme as instruções
+PHP não está rodando: Acesse http://localhost/seu-projeto/salvar.php e veja se há erros
+📌 Tecnologias Usadas
+XAMPP (Apache, MySQL, PHP)
+HTML, CSS, JavaScript
+Fetch API para requisições assíncronas
+
