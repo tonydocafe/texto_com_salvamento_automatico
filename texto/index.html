@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salvar Texto Automático</title>
     <style>
+        /* Estilos para centralizar o conteúdo na tela */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
         #status {
             font-style: italic;
         }
@@ -22,12 +31,14 @@
     </style>
 </head>
 <body>
-    <h2>DIGITE</h2>
-    <textarea id="mensagem" rows="5" cols="50" placeholder="Digite algo..."></textarea>
-    <br>
-    <button id="botaoSalvar">Salvar</button>
-    <p id="status"></p>
-    <p id="resposta"></p>
+    <div>
+        <h2>DIGITE</h2>
+        <textarea id="mensagem" rows="5" cols="50" placeholder="Digite algo..."></textarea>
+        <br>
+        <button id="botaoSalvar">Salvar</button>
+        <p id="status"></p>
+        <p id="resposta"></p>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
