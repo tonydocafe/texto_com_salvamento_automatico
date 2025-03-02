@@ -56,3 +56,7 @@ O sistema utiliza **XAMPP** para fornecer um ambiente local com **Apache, PHP e 
 1. Acesse **phpMyAdmin** em:  
 http://localhost/phpmyadmin/
 
+PHP
+----------------------------------------------------------------------------
+script PHP recebe uma requisição do tipo POST, verifica se há um campo chamado texto na requisição e tenta armazenar esse conteúdo em um banco de dados MySQL, garantindo que não haja duplicatas.
+
