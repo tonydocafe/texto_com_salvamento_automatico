@@ -6,6 +6,10 @@ Este código implementa um sistema de salvamento automático para uma aplicaçã
 
 
 
+
+
+
+
 #### Funcionamento
 #### PHP
 O código PHP verifica se o parâmetro autosave foi enviado no pedido. Caso o parâmetro seja verdadeiro, o código executa o método process_attempt() no objeto $attemptobj, o qual é responsável por processar e salvar os dados da tentativa.
