@@ -19,8 +19,6 @@ O cliente recebe a resposta e exibe um log no console, indicando que os dados fo
 Este sistema de salvamento automático pode ser configurado para salvar qualquer tipo de dado de formulário periodicamente. Para modificar o intervalo do salvamento automático, altere o valor de 60000 (milissegundos) no setInterval().
 
 
-
-
 #### Requisitos
 A página deve conter um formulário válido.
 O código PHP deve ser executado em um ambiente que suporte a função optional_param(), como o Moodle, já que a função é específica desse sistema.
