@@ -26,8 +26,6 @@ O código PHP deve ser executado em um ambiente que suporte a função optional_
 Esse sistema de salvamento automático é útil em aplicações que exigem que o usuário não perca seu progresso em formulários longos, como em testes ou submissões de conteúdo.
 
 
-
-
 # 📝 Salvar Texto Automaticamente com XAMPP  
 
 Este projeto permite salvar automaticamente um texto digitado em um campo de entrada para um banco de dados **MySQL** usando **PHP** e **JavaScript**. O salvamento ocorre a cada **2 segundos após a última digitação**.  
