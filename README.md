@@ -1,17 +1,3 @@
-
-#### Implementação de Salvamento Automático
-##### Descrição
-Este código implementa um sistema de salvamento automático para uma aplicação web. Ele é composto por duas partes: um trecho PHP no servidor e um código JavaScript no cliente. O salvamento automático é realizado a cada 60 segundos sem a necessidade de o usuário clicar em um botão de salvar.
-#### Funcionamento
-#### PHP
-O código PHP verifica se o parâmetro autosave foi enviado no pedido. Caso o parâmetro seja verdadeiro, o código executa o método process_attempt() no objeto $attemptobj, o qual é responsável por processar e salvar os dados da tentativa.
-
-
-
-#### Considerações Finais
-Esse sistema de salvamento automático é útil em aplicações que exigem que o usuário não perca seu progresso em formulários longos, como em testes ou submissões de conteúdo.
-
-
 # 📝 Salvar Texto Automaticamente com XAMPP  
 
 Este projeto permite salvar automaticamente um texto digitado em um campo de entrada para um banco de dados **MySQL** usando **PHP** e **JavaScript**. O salvamento ocorre a cada **2 segundos após a última digitação**.  
