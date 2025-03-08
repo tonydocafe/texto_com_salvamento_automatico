@@ -15,9 +15,6 @@ A função é chamada a cada 60 segundos usando setInterval(), o que garante que
 O JavaScript utiliza fetch() para enviar os dados via POST para a mesma URL da página, incluindo os dados do formulário e o parâmetro de salvamento automático.
 O servidor processa a requisição e, caso o parâmetro autosave seja detectado, ele salva os dados e envia uma resposta JSON.
 O cliente recebe a resposta e exibe um log no console, indicando que os dados foram salvos automaticamente.
-#### Configuração
-Este sistema de salvamento automático pode ser configurado para salvar qualquer tipo de dado de formulário periodicamente. Para modificar o intervalo do salvamento automático, altere o valor de 60000 (milissegundos) no setInterval().
-
 
 #### Requisitos
 A página deve conter um formulário válido.
