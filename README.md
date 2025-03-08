@@ -9,8 +9,6 @@ A função process_attempt() é chamada com o timestamp atual (time()) e outros 
 Após o processamento, o código responde com um JSON contendo o status do salvamento, informando ao cliente que a tentativa foi salva.
 #### JavaScript
 O JavaScript é responsável por realizar a chamada automática ao servidor para salvar os dados sem a interação direta do usuário.
-A função autoSave() coleta os dados do formulário atual e os envia via AJAX para o servidor. Ela adiciona o parâmetro autosave=1 aos dados do formulário para indicar que se trata de uma tentativa de salvamento automático.
-A função é chamada a cada 60 segundos usando setInterval(), o que garante que os dados sejam salvos periodicamente.
 
 
 
