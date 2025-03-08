@@ -5,8 +5,6 @@ Este código implementa um sistema de salvamento automático para uma aplicaçã
 #### Funcionamento
 #### PHP
 O código PHP verifica se o parâmetro autosave foi enviado no pedido. Caso o parâmetro seja verdadeiro, o código executa o método process_attempt() no objeto $attemptobj, o qual é responsável por processar e salvar os dados da tentativa.
-A função process_attempt() é chamada com o timestamp atual (time()) e outros parâmetros, além da variável $page (que pode ser relacionada a uma página de formulário ou contexto de tentativa).
-Após o processamento, o código responde com um JSON contendo o status do salvamento, informando ao cliente que a tentativa foi salva.
 
 
 
