@@ -16,9 +16,7 @@ O JavaScript utiliza fetch() para enviar os dados via POST para a mesma URL da p
 O servidor processa a requisição e, caso o parâmetro autosave seja detectado, ele salva os dados e envia uma resposta JSON.
 O cliente recebe a resposta e exibe um log no console, indicando que os dados foram salvos automaticamente.
 
-#### Requisitos
-A página deve conter um formulário válido.
-O código PHP deve ser executado em um ambiente que suporte a função optional_param(), como o Moodle, já que a função é específica desse sistema.
+
 #### Considerações Finais
 Esse sistema de salvamento automático é útil em aplicações que exigem que o usuário não perca seu progresso em formulários longos, como em testes ou submissões de conteúdo.
 
