@@ -1,29 +1,29 @@
-# 📝 Salvar Texto Automaticamente com XAMPP  
+# 📝 Automatically Save Text with XAMPP
 
-Este projeto permite salvar automaticamente um texto digitado em um campo de entrada para um banco de dados **MySQL** usando **PHP** e **JavaScript**. O salvamento ocorre a cada **2 segundos após a última digitação**.  
+This project allows you to automatically save text entered in an input field to a **MySQL** database using **PHP** and **JavaScript**. Saving occurs every **2 seconds after the last entry**.
 
-O sistema utiliza **XAMPP** para fornecer um ambiente local com **Apache, PHP e MySQL**.  
+The system uses **XAMPP** to provide a local environment with **Apache, PHP and MySQL**.
 
-## 📌 Requisitos  
+## 📌 Requirements
 
-- **XAMPP** instalado  
-- **Apache e MySQL ativados no XAMPP**  
-- **Banco de dados MySQL configurado**  
+- **XAMPP** installed
+- **Apache and MySQL enabled in XAMPP**
+- **MySQL database configured**
 
-## 🛠️ Configuração  
+## 🛠️Configuration
 
-### 1️⃣ Iniciar o XAMPP  
-1. Abra o **XAMPP Control Panel**  
-2. Inicie o **Apache e o MySQL**  
+### 1️⃣ Start XAMPP
+1. Open the **XAMPP Control Panel**
+2. Start **Apache and MySQL**
 
-### 2️⃣ Criar o Banco de Dados  
-1. Acesse **phpMyAdmin** em:  
+### 2️⃣ Create the Database
+1. Access **phpMyAdmin** at:
 http://localhost/phpmyadmin/
 
 PHP
 ----------------------------------------------------------------------------
-O script PHP recebe uma requisição do tipo POST, verifica se há um campo chamado texto na requisição e tenta armazenar esse conteúdo em um banco de dados MySQL, garantindo que não haja duplicatas.
+The PHP script receives a POST request, checks if there is a field called text in the request and tries to store this content in a MySQL database, ensuring that there are no duplicates.
 
 .JS
 ------------------------------------------------------------------------------
-JavaScript implementa um sistema de salvamento automático e manual de um texto digitado pelo usuário, enviando-o para um servidor via fetch(). Ele evita envios repetidos e fornece feedback visual ao usuário.
+JavaScript implements a system for automatic and manual saving of text entered by the user, sending it to a server via fetch(). It avoids repeated submissions and provides visual feedback to the user.
